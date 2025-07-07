@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>4 Nights/5 Days Spiritual Tour - SWJ Swaraj Tour & Travels</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #D4AF37;        /* Gold - main brand color */
+            --secondary-color: #B8860B;      /* Dark Goldenrod - accents */
+            --accent-color: #8B6914;         /* Royal Gold - buttons/shadows */
+            --dark-color: #1A1A1A;          /* Rich black background */
+            --light-color: #F5F5F5;          /* Light background */
+            --text-color: #444444;           /* Main text color */
+            --highlight-color: #B22222;      /* Firebrick for highlights */
+            --white: #FFFFFF;
+            
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Raleway', sans-serif;
+            
+            --border-radius: 8px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            color: var(--text-color);
+            background-color: var(--light-color);
+            line-height: 1.7;
+            background-image: url('https://images.unsplash.com/photo-1519052537078-e6302a4968d4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-attachment: fixed;
+            background-size: cover;
+            background-position: center;
+            background-blend-mode: overlay;
+            background-color: rgba(245, 245, 245, 0.9);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .navbar {
+            background-color: rgba(26, 26, 26, 0.9) !important;
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+            transition: var(--transition);
+        }
+        
+        .navbar-brand img:hover {
+            transform: scale(1.05);
+        }
+        
+        .nav-link {
+            color: var(--light-color) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+        
+        .nav-link:hover, .nav-link.active {
+            color: var(--primary-color) !important;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(26, 26, 26, 0.85), rgba(26, 26, 26, 0.85)), 
+                        url('https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: var(--white);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero-section h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--white);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        .hero-section p.lead {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: var(--dark-color);
+            font-weight: 500;
+            padding: 10px 25px;
+            transition: var(--transition);
+            font-size: 0.95rem;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn-outline-light:hover {
+            color: var(--dark-color);
+        }
+        
+        .section-title {
+            position: relative;
+            margin-bottom: 2.5rem;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--primary-color);
+            margin: 15px auto 0;
+        }
+        
+        .highlight-card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            height: 100%;
+            transition: var(--transition);
+            box-shadow: var(--box-shadow);
+            border-top: 4px solid var(--primary-color);
+        }
+        
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .highlight-card i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .highlight-card h5 {
+            color: var(--dark-color);
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
+        }
+        
+        .highlight-card p {
+            font-size: 0.9rem;
+        }
+        
+        .itinerary-day {
+            background-color: var(--white);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 25px;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        
+        .itinerary-day:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .day-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 15px 20px;
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        .day-content {
+            padding: 20px;
+        }
+        
+        .day-content p {
+            font-size: 0.95rem;
+        }
+        
+        .highlight-box {
+            background-color: rgba(212, 175, 55, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+        
+        .highlight-box h5 {
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 1rem;
+        }
+        
+        .highlight-box h5 i {
+            margin-right: 8px;
+        }
+        
+        .highlight-box ul {
+            font-size: 0.9rem;
+        }
+        
+        .highlight-box li {
+            margin-bottom: 5px;
+        }
+        
+        .itinerary-img {
+            height: 220px;
+            object-fit: cover;
+            width: 100%;
+            border-radius: var(--border-radius);
+            transition: var(--transition);
+        }
+        
+        .itinerary-img:hover {
+            transform: scale(1.03);
+        }
+        
+        .included-list, .excluded-list {
+            list-style-type: none;
+            padding-left: 0;
+            font-size: 0.9rem;
+        }
+        
+        .included-list li, .excluded-list li {
+            padding: 6px 0;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .included-list li:before {
+            content: "\f00c";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 400;
+            color: var(--primary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .excluded-list li:before {
+            content: "\f00d";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 400;
+            color: var(--highlight-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .price-box {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--box-shadow);
+        }
+        
+        .price-box h3 {
+            font-size: 1.3rem;
+        }
+        
+        .price-box .display-4 {
+            font-weight: 500;
+            color: var(--white);
+            font-size: 2.5rem;
+        }
+        
+        .price-box p {
+            font-size: 0.95rem;
+        }
+        
+        .card {
+            border: none;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-header {
+            font-family: var(--font-heading);
+            font-weight: 500;
+            font-size: 1.1rem;
+        }
+        
+        footer {
+            background-color: rgba(26, 26, 26, 0.95);
+            color: var(--white);
+            padding: 50px 0 20px;
+            backdrop-filter: blur(5px);
+        }
+        
+        footer h5 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-weight: 500;
+            font-size: 1.2rem;
+        }
+        
+        footer p, footer li {
+            font-size: 0.9rem;
+        }
+        
+        footer a {
+            color: var(--white);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 36px;
+            height: 36px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 36px;
+            margin-right: 8px;
+            transition: var(--transition);
+            font-size: 0.9rem;
+        }
+        
+        .social-icons a:hover {
+            background-color: var(--primary-color);
+            color: var(--dark-color);
+            transform: translateY(-3px);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25D366;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 24px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition);
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .bg-light-custom {
+            background-color: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(5px);
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                padding: 80px 0;
+            }
+            
+            .hero-section h1 {
+                font-size: 1.8rem;
+            }
+            
+            .hero-section p.lead {
+                font-size: 1rem;
+            }
+            
+            .itinerary-img {
+                height: 180px;
+                margin-bottom: 15px;
+            }
+            
+            .price-box .display-4 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="Swj Swaraj Consultancy Private Limited.png" alt="SWJ Swaraj Tour & Travels">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#packages">Tour Packages</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="itinerary.html">Itinerary</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html#contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4" data-aos="fade-down">4 Nights / 5 Days Spiritual Tour</h1>
+            <p class="lead mb-5" data-aos="fade-down" data-aos-delay="100">Ayodhya → Prayagraj → Chitrakoot → Varanasi</p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <a href="#contact" class="btn btn-primary btn-lg px-4 me-3">Book Now</a>
+                <a href="#itinerary" class="btn btn-outline-light btn-lg px-4">View Itinerary</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tour Highlights -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Spiritual Journey Highlights</h2>
+                    <p class="lead">Experience the divine essence of India's most sacred cities</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="highlight-card">
+                        <i class="fas fa-temple"></i>
+                        <h5>Sacred Temples</h5>
+                        <p>Visit the holiest sites including Ram Janmabhoomi and Kashi Vishwanath Temple, immersing yourself in divine energy.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="highlight-card">
+                        <i class="fas fa-water"></i>
+                        <h5>Holy Dips</h5>
+                        <p>Experience sacred baths at Triveni Sangam and Saryu River, believed to cleanse sins and purify the soul.</p>
+                    </div>
+                </div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="highlight-card">
+                        <i class="fas fa-fire"></i>
+                        <h5>Divine Aartis</h5>
+                        <p>Witness mesmerizing Ganga Aarti and Saryu River ceremonies, spiritual spectacles that illuminate the night.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Itinerary -->
+    <section id="itinerary" class="py-5 bg-light-custom">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Detailed Day-wise Itinerary</h2>
+                    <p class="lead">A spiritual journey through India's holiest cities</p>
+                </div>
+            </div>
+            
+            <!-- Day 1 -->
+            <div class="itinerary-day" data-aos="fade-up">
+                <div class="day-header">
+                    <h3 class="mb-0 text-white">Day 1: Arrival in Ayodhya - The Birthplace of Lord Rama</h3>
+                </div>
+                <div class="day-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1587474260584-136574528ed5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Ayodhya" class="itinerary-img">
+                        </div>
+                        <div class="col-md-8">
+                            <p>Arrive in Ayodhya (via train/road/flight) and check-in to your hotel. After refreshment, begin your spiritual journey in this sacred city where Lord Rama was born.</p>
+                            
+                            <div class="highlight-box">
+                                <h5><i class="fas fa-map-marker-alt me-2"></i>Today's Highlights:</h5>
+                                <ul class="mb-0">
+                                    <li><strong>Shri Ram Janmabhoomi</strong> - The sacred birthplace of Lord Rama</li>
+                                    <li><strong>Hanuman Garhi</strong> - Iconic temple dedicated to Lord Hanuman</li>
+                                    <li><strong>Kanak Bhawan</strong> - Famous for its golden idols of Rama and Sita</li>
+                                    <li><strong>Dashrath Mahal</strong> - Ancient palace of King Dashrath</li>
+                                    <li><strong>Guptar Ghat</strong> - Evening visit to this sacred bathing spot</li>
+                                    <li><strong>Saryu River Aarti</strong> - Mesmerizing evening ceremony</li>
+                                    <li><strong>Surya Kund Laser Show</strong> - Spectacular light and sound show</li>
+                                </ul>
+                            </div>
+                            
+                            <p><strong>Overnight:</strong> Ayodhya | <strong>Meals:</strong> Dinner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 2 -->
+            <div class="itinerary-day" data-aos="fade-up" data-aos-delay="100">
+                <div class="day-header">
+                    <h3 class="mb-0 text-white">Day 2: Ayodhya to Prayagraj (Approx. 170 km / 4-5 hrs)</h3>
+                </div>
+                <div class="day-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixlib=rb-4.0.3&auto=format&fit=crop&w=1632&q=80" alt="Prayagraj" class="itinerary-img">
+                        </div>
+                        <div class="col-md-8">
+                            <p>Early morning departure after breakfast. Enroute stop for refreshments before reaching the holy city of Prayagraj, home to the sacred Triveni Sangam.</p>
+                            
+                            <div class="highlight-box">
+                                <h5><i class="fas fa-map-marker-alt me-2"></i>Today's Highlights:</h5>
+                                <ul class="mb-0">
+                                    <li><strong>Triveni Sangam</strong> - Sacred confluence of Ganga, Yamuna and Saraswati rivers (Holy Dip)</li>
+                                    <li><strong>Hanuman Mandir (Lete Hanuman)</strong> - Unique temple with reclining Hanuman idol</li>
+                                    <li><strong>Anand Bhawan</strong> - Historic Nehru family residence turned museum</li>
+                                    <li><strong>Alopi Devi Mandir</strong> - Mysterious shrine where Goddess disappeared</li>
+                                    <li><strong>Evening Aarti at Sangam</strong> - Spiritual ceremony by the river</li>
+                                </ul>
+                            </div>
+                            
+                            <p><strong>Overnight:</strong> Prayagraj | <strong>Meals:</strong> Breakfast & Dinner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 3 -->
+            <div class="itinerary-day" data-aos="fade-up" data-aos-delay="200">
+                <div class="day-header">
+                    <h3 class="mb-0 text-white">Day 3: Prayagraj to Chitrakoot (Approx. 130 km / 3-4 hrs)</h3>
+                </div>
+                <div class="day-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1581852057101-dc7a1a695c0e?ixlib=rb-4.0.3&auto=format&fit=crop&w=1474&q=80" alt="Chitrakoot" class="itinerary-img">
+                        </div>
+                        <div class="col-md-8">
+                            <p>Depart after breakfast to Chitrakoot, the place where Lord Rama spent 11 years of his exile. This tranquil town is nestled in the Vindhya mountain range.</p>
+                            
+                            <div class="highlight-box">
+                                <h5><i class="fas fa-map-marker-alt me-2"></i>Today's Highlights:</h5>
+                                <ul class="mb-0">
+                                    <li><strong>Ram Ghat</strong> - Sacred bathing spot on Mandakini River</li>
+                                    <li><strong>Kamadgiri Parikrama</strong> - Circumambulation of the holy hill</li>
+                                    <li><strong>Hanuman Dhara</strong> - Temple with natural water stream falling on Hanuman idol</li>
+                                    <li><strong>Sphatik Shila</strong> - Rock where Sita left her footprint</li>
+                                    <li><strong>Gupt Godavari</strong> - Mysterious caves with natural throne-like formations</li>
+                                </ul>
+                            </div>
+                            
+                            <p><strong>Overnight:</strong> Chitrakoot | <strong>Meals:</strong> Breakfast & Dinner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 4 -->
+            <div class="itinerary-day" data-aos="fade-up" data-aos-delay="100">
+                <div class="day-header">
+                    <h3 class="mb-0 text-white">Day 4: Chitrakoot to Varanasi (Approx. 260 km / 6-7 hrs)</h3>
+                </div>
+                <div class="day-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1528127269322-539a9434c5b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Varanasi" class="itinerary-img">
+                        </div>
+                        <div class="col-md-8">
+                            <p>Early morning drive to Varanasi, the spiritual capital of India. Check-in and rest before afternoon sightseeing in this ancient city that's considered the holiest in Hinduism.</p>
+                            
+                            <div class="highlight-box">
+                                <h5><i class="fas fa-map-marker-alt me-2"></i>Today's Highlights:</h5>
+                                <ul class="mb-0">
+                                    <li><strong>Kashi Vishwanath Temple</strong> - One of the 12 Jyotirlingas of Lord Shiva</li>
+                                    <li><strong>Annapurna Devi Temple</strong> - Goddess of nourishment</li>
+                                    <li><strong>Dashashwamedh Ghat</strong> - Most famous ghat in Varanasi</li>
+                                    <li><strong>Evening Ganga Aarti</strong> - Spectacular fire ceremony on the ghats</li>
+                                </ul>
+                            </div>
+                            
+                            <p><strong>Overnight:</strong> Varanasi | <strong>Meals:</strong> Breakfast & Dinner</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Day 5 -->
+            <div class="itinerary-day" data-aos="fade-up" data-aos-delay="200">
+                <div class="day-header">
+                    <h3 class="mb-0 text-white">Day 5: Varanasi Sightseeing & Departure</h3>
+                </div>
+                <div class="day-content">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <img src="https://images.unsplash.com/photo-1528127269322-539a9434c5b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80" alt="Varanasi Ghats" class="itinerary-img">
+                        </div>
+                        <div class="col-md-8">
+                            <p>Begin your final day with a spiritual boat ride on the sacred Ganges River at sunrise, witnessing the city come alive with morning rituals.</p>
+                            
+                            <div class="highlight-box">
+                                <h5><i class="fas fa-map-marker-alt me-2"></i>Today's Highlights:</h5>
+                                <ul class="mb-0">
+                                    <li><strong>Morning Boat Ride</strong> - Witness rituals and ceremonies along the ghats</li>
+                                    <li><strong>Sarnath</strong> - Where Buddha gave his first sermon (Dhamek Stupa, Museum)</li>
+                                    <li><strong>Tulsi Manas Temple</strong> - Beautiful temple with Ramcharitmanas inscriptions</li>
+                                    <li><strong>Bharat Mata Temple</strong> - Unique temple dedicated to Mother India</li>
+                                </ul>
+                            </div>
+                            
+                            <p>After lunch, transfer to Railway Station / Airport for your return journey with divine blessings.</p>
+                            <p><strong>Meals:</strong> Breakfast</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Inclusions -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Package Details</h2>
+                    <p class="lead">What's included in your spiritual journey</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="card h-100">
+                        <div class="card-header bg-primary text-white">
+                            <h4 class="mb-0"><i class="fas fa-check-circle me-2"></i> What's Included</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="included-list">
+                                <li>4 nights accommodation in 3-star hotels (twin sharing)</li>
+                                <li>Daily breakfast at hotels</li>
+                                <li>All transfers & sightseeing by AC vehicle</li>
+                                <li>Boat ride in Varanasi</li>
+                                <li>Entrance fees to monuments as per itinerary</li>
+                                <li>English speaking tour guide</li>
+                                <li>All applicable taxes</li>
+                                <li>24/7 customer support</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="card h-100">
+                        <div class="card-header bg-secondary text-white">
+                            <h4 class="mb-0"><i class="fas fa-times-circle me-2"></i> What's Not Included</h4>
+                        </div>
+                        <div class="card-body">
+                            <ul class="excluded-list">
+                                <li>Lunch and dinner (can be arranged at additional cost)</li>
+                                <li>Air/train tickets to/from Ayodhya/Varanasi</li>
+                                <li>Personal expenses (laundry, phone calls, etc.)</li>
+                                <li>Camera fees at monuments</li>
+                                <li>Travel insurance</li>
+                                <li>Anything not mentioned in inclusions</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing & Booking -->
+    <section id="contact" class="py-5 bg-light-custom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 mb-4 mb-lg-0" data-aos="fade-right">
+                    <div class="price-box">
+                        <h3 class="text-white mb-4">Package Price</h3>
+                        <div class="display-4 text-white mb-3">₹14,999</div>
+                        <p class="text-white mb-4">per person (twin sharing basis)</p>
+                        <p class="text-white-50 mb-4"><small>*Price valid till December 2023</small></p>
+                        <div class="d-grid gap-3">
+                            <a href="tel:+919696248024" class="btn btn-light btn-lg">
+                                <i class="fas fa-phone me-2"></i> Call to Book
+                            </a>
+                            <a href="https://wa.me/919696248024" class="btn btn-success btn-lg">
+                                <i class="fab fa-whatsapp me-2"></i> WhatsApp Us
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="card">
+                        <div class="card-body p-4">
+                            <h3 class="mb-4">Book This Spiritual Journey</h3>
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="name" class="form-label">Your Name</label>
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="email" class="form-label">Your Email</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="phone" class="form-label">Phone Number</label>
+                                        <input type="tel" class="form-control" id="phone" placeholder="Phone Number" required>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="city" class="form-label">City</label>
+                                        <input type="text" class="form-control" id="city" placeholder="City">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="date" class="form-label">Preferred Travel Date</label>
+                                        <input type="date" class="form-control" id="date">
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="travelers" class="form-label">Number of Travelers</label>
+                                        <select class="form-select" id="travelers">
+                                            <option selected disabled>Select</option>
+                                            <option>1 Person</option>
+                                            <option>2 Persons</option>
+                                            <option>3 Persons</option>
+                                            <option>4 Persons</option>
+                                            <option>5+ Persons</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="requirements" class="form-label">Special Requirements</label>
+                                    <textarea class="form-control" id="requirements" rows="4" placeholder="Any special requests or requirements"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100 py-3">Send Booking Request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <img src="Swj Swaraj Consultancy Private Limited.png" alt="SWJ Swaraj Tour & Travels" class="mb-4" style="height:50px">
+                    <p>Your trusted partner for spiritual journeys across India's most sacred destinations. We specialize in creating meaningful travel experiences that nourish the soul.</p>
+                    <div class="social-icons mt-4">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-5 mb-lg-0">
+                    <h5>Contact Info</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-3"><i class="fas fa-map-marker-alt me-2"></i> 123 Ram Path, Ayodhya, UP, India</li>
+                        <li class="mb-3"><i class="fas fa-phone-alt me-2"></i> +91 9696248024</li>
+                        <li class="mb-3"><i class="fas fa-envelope me-2"></i> info@swjswarajtravels.in</li>
+                        <li class="mb-3"><i class="fas fa-clock me-2"></i> Mon-Sat: 9:00 AM - 7:00 PM</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html">Home</a></li>
+                        <li class="mb-2"><a href="index.html#packages">Tour Packages</a></li>
+                        <li class="mb-2"><a href="itinerary.html">Itineraries</a></li>
+                        <li class="mb-2"><a href="index.html#about">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#contact">Contact</a></li>
+                        <li class="mb-2"><a href="#">Privacy Policy</a></li>
+                        <li class="mb-2"><a href="#">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-5 bg-secondary">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                    <p class="mb-0">&copy; 2023 SWJ Swaraj Tour & Travels. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <p class="mb-0">Designed with <i class="fas fa-heart text-danger"></i> by <a href="#" class="text-white">SWJ Swaraj Consultancy</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/919696248024" target="_blank"
+       class="btn btn-success d-flex align-items-center justify-content-center rounded-circle position-fixed text-white text-decoration-none whatsapp-float"
+       style="z-index: 1050;">
+       <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
