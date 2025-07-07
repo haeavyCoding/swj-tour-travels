@@ -248,23 +248,24 @@
             position: relative;
         }
         
-        .included-list li:before {
-            content: "\f00c";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 400;
-            color: var(--primary-color);
-            position: absolute;
-            left: 0;
-        }
-        
-        .excluded-list li:before {
-            content: "\f00d";
-            font-family: "Font Awesome 6 Free";
-            font-weight: 400;
-            color: var(--highlight-color);
-            position: absolute;
-            left: 0;
-        }
+       .included-list li:before {
+    content: "\f00c"; /* check */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900; /* solid */
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
+
+.excluded-list li:before {
+    content: "\f00d"; /* times */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900; /* solid */
+    color: var(--highlight-color);
+    position: absolute;
+    left: 0;
+}
+
         
         .price-box {
             background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
